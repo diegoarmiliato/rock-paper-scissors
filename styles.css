@@ -1,0 +1,124 @@
+:root {
+  --main-bg-color: #292C34;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: Asap, sans-serif;
+}
+
+header {
+  background: white;
+  padding: 20px;
+}
+
+header > h1 {
+  color: var(--main-bg-color);
+  text-align: center;
+}
+
+.score-board {
+  position: relative;
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 4px;
+  width: 200px;
+  color: white;
+  font-size: 46px;
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.badge {
+  background: #E2584D;
+  font-size: 14px;
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -16px;
+}
+
+#computer-label {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+}
+
+.result {
+  font-size: 40px;
+  color: white;
+}
+
+.result > p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.choices {
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.choice {
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.choice.choice-no-hover:hover {
+  background-color: var(--main-bg-color);
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #E2584D;
+}
+
+.choice:active {
+  background-color: tomato;
+}
+
+@keyframes blink_lose {
+  50% { border-color: red; }
+}
+
+@keyframes blink_win {
+  50% { border-color: greenyellow; }
+}
+
+@keyframes blink_draw {
+  50% { border-color: grey; }
+}
+
+.blink-lose {
+  animation: blink_lose 1s;
+}
+
+.blink-win {
+  animation: blink_win 1s;
+}
+
+.blink-draw {
+  animation: blink_draw 1s;
+}
+
+#action-message {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
